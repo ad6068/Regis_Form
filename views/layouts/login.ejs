@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title><%= local.title %></title>
+    <meta name="description" content="<%= local.description %>" />
+</head>
+<body>  
+    <div class="wrapper">
+        <form action="/login" method="post">
+            <h1>LOGIN</h1>        
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="username" name="username_login" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="email" placeholder="email" id="email" name="email_login" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="password" name="password_login" required>
+            </div>
+
+            <div class="remember-forgot">
+                <label> <input type="checkbox"> Remember Me </label>
+                <a href="#">Forget Password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>
+

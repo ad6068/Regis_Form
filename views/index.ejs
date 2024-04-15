@@ -1,0 +1,31 @@
+<div class="author">
+  <h1 class="author_heading">Hii, I am Yash</h1>
+  <p class="author_body">Web Developer</p>
+</div>
+
+<img
+  src="/img/personlooking.JPG"
+  alt="person looking out"
+  class="hero_image"
+  width="30%"
+/>
+
+<section class="articles">
+  <h2 class="articles_heading">Latest Post</h2>
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <span class="article-list_date"
+          ><%= post.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextpage !== null) { %>
+  <a href="/blog?page=<%= nextpage %>" class="Pagination">&lt; Older Post</a>
+  <% } %>
+</section>
